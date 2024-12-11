@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --cor-primaria-minecraft: #FFFF00; 
+    --cor-secundaria: #333;
+    --cor-texto: #fcfcfc;
+    --background: #1a1a1a;
+    --card-background: #2c2c2c;
+    --hover-color: #FFEB3B  ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--cor-texto);
+    background-color: var(--background);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(26, 26, 26, 0.9);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .minecraft-logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 5px;
+}
+
+nav ul li a:hover {
+    color: var(--cor-primaria-minecraft);
+}
+
+
+.videofundo {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobreposicao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.conteudohome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.conteudohome h1 {
+    font-size: 92px;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    animation: fadeInUp 1s ease;
+    font-family: "VT323", monospace;
+}
+
+.conteudohome p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    animation: fadeInUp 1s ease 0.2s;
+}
+
+
+
+.sobre {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-imagem img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 4px solid var(--cor-primaria-minecraft);
+}
+
+.sobre-texto h2 {
+    color: var(--cor-primaria-minecraft);
+    margin-bottom: 20px;
+}
+
+.estrutura {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--card-background);
+}
+
+.codigo-exemplo pre {
+    background-color: var(--background);
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+
+.curiosidades {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.grid-curiosidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.curiosidade-item {
+    background-color: var(--card-background);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.curiosidade-item:hover {
+    transform: translateY(-10px);
+}
+
+.curiosidade-item i {
+    font-size: 48px;
+    color: var(--cor-primaria-minecraft);
+    margin-bottom: 15px;
+}
+
+
+.contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #313030;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+    color: var(--cor-primaria-minecraft);
+    margin-bottom: 20px;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-grupo {  
+    margin-bottom: 20px;
+}
+
+.input-grupo label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.input-grupo input, .input-grupo textarea, .input-grupo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.formulario-contato button[type="submit"] {
+    background-color: var(--hover-color); 
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-contato button[type="submit"]:hover {
+    background-color: var(--cor-primaria-minecraft);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+versoes-minecraft {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 30px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.versoes-minecraft th,
+.versoes-minecraft td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--background);
+}
+
+.versoes-minecraft th {
+    background-color: var(--cor-primaria-minecraft);
+    color: var(--background);
+    font-weight: bold;
+}
+
+.versoes-minecraft tr:nth-child(even) {
+    background-color: rgba(155, 145, 51, 0.1);
+}
+
+.versoes-minecraft tr:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-secundario);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-primaria-minecraft);
+    border-radius: 5px;
+}
+
+.galeria {
+    background-color: var(--background-secundario);
+    padding: 80px 0;
+}
+
+.galeria h2 {
+    text-align: center;
+    color: var(--cor-primaria-minecraft);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.subtitulo-galeria {
+    text-align: center;
+    color: var(--cor-texto);
+    margin-bottom: 40px;
+    opacity: 0.7;
+}
+
+.galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galeria-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 20px;
+    color: white;
+    transition: background 0.4s ease;
+}
+
+.galeria-item .overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-destaque);
+}
+
+.galeria-item .overlay p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+.minecraft-footer {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--cor-primaria-minecraft);
+}
+
+.minecraft-footer .footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.minecraft-footer .footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.minecraft-footer .footer-links a,
+.minecraft-footer .footer-social a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.minecraft-footer .footer-links a:hover,
+.minecraft-footer .footer-social a:hover {
+    color: var(--cor-primaria-minecraft);
+}
+
+.minecraft-footer .footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.minecraft-footer .footer-social a {
+    font-size: 20px;
+}
+
+.chefoes {
+    background-color: var(--background);
+    padding: 80px 0;
+}
+
+.subtitulo-chefoes {
+    text-align: center;
+    color: var(--cor-texto);
+    margin-bottom: 40px;
+    opacity: 0.7;
+}
+
+.chefoes h2 {
+    text-align: center;
+    color: var(--cor-primaria-minecraft);
+    margin-bottom: 20px;
+}
+
+.chefoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.chefoe-card {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.chefoe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.chefoe-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* Changed from cover to contain */
+    background-color: rgba(255,255,255,0.1); /* Light background to help with transparency */
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.chefoe-card:hover img {
+    transform: scale(1.1);
+}
+
+.chefoe-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chefoe-info h3 {
+    color: var(--cor-primaria-minecraft);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.chefoe-info p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.chefoe-detalhes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    font-size: 0.9em;
+    opacity: 0.8;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.chefoe-detalhes .dificuldade {
+    color: var(--cor-primaria-minecraft);
+    font-weight: bold;
+}

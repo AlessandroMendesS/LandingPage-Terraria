@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.75, user-scalable=no"
+    />
+    <title>Terraria</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-container">
+          <div class="logo">
+            <h1>Terraria</h1>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#home"><i class="fas fa-home"></i>Home</a>
+              </li>
+              <li>
+                <a href="#sobre"><i class="fas fa-user"></i> Sobre</a>
+              </li>
+              <li>
+                <a href="#estrutura"
+                  ><i class="fas fa-code"></i>Estrutura - Código</a
+                >
+              </li>
+              <li>
+                <a href="#curiosidades"
+                  ><i class="fa-solid fa-question"></i>Curiosidades</a
+                >
+              </li>
+              <li>
+                <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="videofundo">
+      <video autoplay muted loop>
+        <source
+          src="assets/video/Terraria 1.4.3 - Don t Starve Together Update Trailer.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="sobreposicao"></div>
+      <div class="conteudohome">
+        <h1>Terraria</h1>
+        <p>
+          Terraria é um jogo de aventura, construção e exploração em um mundo 2D
+          rico em detalhes.
+        </p>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <div class="sobre-content">
+          <div class="sobre-imagem">
+            <img src="assets/img/note.webp" alt="Foto do Autor" />
+          </div>
+          <div class="sobre-texto">
+            <h2>Sobre Terraria</h2>
+            <p>
+              Desenvolvido pela Re-Logic, Terraria foi criado por Andrew Spinks
+              com a visão de um jogo que combinasse elementos de exploração,
+              construção e combate em um mundo 2D ricamente detalhado. Lançado
+              em maio de 2011, o jogo rapidamente se tornou um fenômeno indie,
+              vendendo mais de 35 milhões de cópias worldwide. Diferente de
+              jogos 3D como Minecraft, Terraria oferece uma experiência única
+              com gráficos pixel art detalhados e mecânicas de jogo profundas
+              que permitem praticamente infinitas possibilidades de criação e
+              aventura.
+            </p>
+            <p>
+              O jogo mistura elementos de RPG, survival, crafting e combate,
+              permitindo que os jogadores explorem, construam, lutem e
+              personalizem seus mundos de formas surpreendentemente complexas.
+              Cada mundo gerado é único, com biomas distintos, estruturas
+              geradas proceduralmente e uma variedade incrível de inimigos e
+              desafios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="estrutura" class="estrutura">
+      <div class="container">
+        <div class="estrutura-content">
+          <h2>Estrutura de Código</h2>
+          <div class="codigo-exemplo">
+            <pre><code class="language-csharp">
+                    public class TerrariaMod {
+                        public static void CreateCustomItem() {
+                            // Exemplo de criação de item personalizado
+                            Item customWeapon = new Item();
+                            customWeapon.SetDefaults("Custom Sword");
+                            customWeapon.damage = 50;
+                            customWeapon.useStyle = ItemUseStyleID.Swing;
+                            
+                            // Registrar o item no jogo
+                            ModContent.Register(customWeapon);
+                        }
+                    }
+                    </code></pre>
+          </div>
+          <div class="descricao-codigo">
+            <p>
+              Um exemplo simples de como criar e registrar um item personalizado
+              em uma modificação de Terraria usando C#.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bosses" class="chefoes">
+      <div class="container">
+        <h2>Chefões de Terraria</h2>
+        <p class="subtitulo-chefoes">
+          Explore os desafios épicos que definem a jornada de um verdadeiro aventureiro em Terraria
+        </p>
+        
+        <div class="chefoes-grid">
+          <div class="chefoe-card">
+            <img src="assets/img/eye.png" alt="Olho de Cthulhu">
+            <div class="chefoe-info">
+              <h3>Olho de Cthulhu</h3>
+              <p>O primeiro grande desafio dos jogadores, este chefão noturno testa as habilidades iniciais dos aventureiros.</p>
+              <div class="chefoe-detalhes">
+                <span class="dificuldade">Dificuldade: Médio</span>
+                <span class="fase">Fase Inicial do Jogo</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chefoe-card">
+            <img src="assets/img/cere.png" alt="Cérebro de Cthulhu">
+            <div class="chefoe-info">
+              <h3>Cérebro de Cthulhu</h3>
+              <p>Um chefão complexo que requer estratégia e movimentação precisa para ser derrotado.</p>
+              <div class="chefoe-detalhes">
+                <span class="dificuldade">Dificuldade: Alto</span>
+                <span class="fase">Pré-Hardmode</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chefoe-card">
+            <img src="assets/img/Wall_of_Flesh.webp" alt="Parede de Carne">
+            <div class="chefoe-info">
+              <h3>Parede de Carne</h3>
+              <p>A transição definitiva para o Hardmode, este chefão marca um ponto de virada na progressão do jogo.</p>
+              <div class="chefoe-detalhes">
+                <span class="dificuldade">Dificuldade: Muito Alto</span>
+                <span class="fase">Transição para Hardmode</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chefoe-card">
+            <img src="assets/img/mechanics.png" alt="Chefões Mecânicos">
+            <div class="chefoe-info">
+              <h3>Chefões Mecânicos</h3>
+              <p>Trio de chefões mecânicos que testam toda a habilidade e preparação do jogador.</p>
+              <div class="chefoe-detalhes">
+                <span class="dificuldade">Dificuldade: Extremo</span>
+                <span class="fase">Hardmode Inicial</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chefoe-card">
+            <img src="assets/img/Plantera_29.webp" alt="Plantera">
+            <div class="chefoe-info">
+              <h3>Plantera</h3>
+              <p>Um dos chefões mais desafiadores, marcando uma nova fase de dificuldade no jogo.</p>
+              <div class="chefoe-detalhes">
+                <span class="dificuldade">Dificuldade: Épico</span>
+                <span class="fase">Mid-Hardmode</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chefoe-card">
+            <img src="assets/img/Moon_Lord.webp" alt="Senhor Lunar">
+            <div class="chefoe-info">
+              <h3>Senhor Lunar</h3>
+              <p>O chefão final de Terraria, representando o pináculo da jornada do jogador.</p>
+              <div class="chefoe-detalhes">
+                <span class="dificuldade">Dificuldade: Supremo</span>
+                <span class="fase">Fase Final</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="versoes" class="versoes">
+      <div class="container">
+        <h2>Histórico de Versões do Terraria</h2>
+        <table class="versoes-minecraft">
+          <thead>
+            <tr>
+              <th>Versão</th>
+              <th>Data de Lançamento</th>
+              <th>Principais Novidades</th>
+              <th>Impacto no Jogo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>v1.0</td>
+              <td>Maio de 2011</td>
+              <td>Primeira versão lançada</td>
+              <td>Introdução do conceito básico de sandbox 2D</td>
+            </tr>
+            <tr>
+              <td>1.2 (Aventura Expandida)</td>
+              <td>Outubro de 2013</td>
+              <td>Novos biomas, itens e mecânicas de jogo</td>
+              <td>
+                Expandiu significativamente as possibilidades de exploração
+              </td>
+            </tr>
+            <tr>
+              <td>1.3 (Modo Especialista)</td>
+              <td>Junho de 2015</td>
+              <td>Adição do modo especialista e novos desafios</td>
+              <td>Incrementou a dificuldade e rejogabilidade</td>
+            </tr>
+            <tr>
+              <td>1.4 (Journey's End)</td>
+              <td>Maio de 2020</td>
+              <td>Atualização definitiva com novos conteúdos e mecânicas</td>
+              <td>
+                Considerada a versão mais completa, adicionando sistemas
+                complexos
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="curiosidades" class="curiosidades">
+      <div class="container">
+        <h2>Curiosidades sobre Terraria</h2>
+        <div class="grid-curiosidades">
+          <div class="curiosidade-item">
+            <i class="fas fa-cube"></i>
+            <h3>Mundo Extenso</h3>
+            <p>
+              Terraria possui mundos enormes com infinitas possibilidades de
+              exploração. Cada mundo gerado pode ter até 8400 blocos de largura,
+              proporcionando uma experiência verdadeiramente única.
+            </p>
+          </div>
+          <div class="curiosidade-item">
+            <i class="fas fa-users"></i>
+            <h3>Comunidade Ativa</h3>
+            <p>
+              Mais de 35 milhões de cópias vendidas globalmente. A comunidade de
+              Terraria é conhecida por sua criatividade e compartilhamento
+              constante de construções incríveis.
+            </p>
+          </div>
+          <div class="curiosidade-item">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Criatividade Infinita</h3>
+            <p>
+              Jogadores podem construir estruturas complexas, desde simples
+              cabanas até cidades inteiras, com mais de 4000 itens diferentes
+              para usar e combinar.
+            </p>
+          </div>
+          <div class="curiosidade-item">
+            <i class="fas fa-code"></i>
+            <h3>Modding Vibrante</h3>
+            <p>
+              Uma comunidade de modding extremamente criativa que adiciona novos
+              conteúdos, mecânicas e até conversões totais do jogo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="galeria" class="galeria">
+      <div class="container">
+        <h2>Galeria de Mundos Terraria</h2>
+        <p class="subtitulo-galeria">
+          Explore incríveis construções e paisagens criadas pela comunidade
+        </p>
+
+        <div class="galeria-imagens">
+          <div class="galeria-item">
+            <img src="assets/img/castelo.png" alt="Castelo Medieval" />
+            <div class="overlay">
+              <h3>Castelo Medieval</h3>
+              <p>Construção detalhada com torres e muralhas</p>
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img src="assets/img/futuro.png" alt="Cidade Futurista" />
+            <div class="overlay">
+              <h3>Metrópole Futurista</h3>
+              <p>Arranha-céus e tecnologia avançada</p>
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img src="assets/img/distant.png" alt="Paisagem Natural" />
+            <div class="overlay">
+              <h3>Paisagem Épica</h3>
+              <p>Montanhas e florestas geradas proceduralmente</p>
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img src="assets/img/redstone.png" alt="Máquina Complexa" />
+            <div class="overlay">
+              <h3>Sistema de Mecanismos</h3>
+              <p>Engenhocas e máquinas complexas de Terraria</p>
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img src="assets/img/sub.png" alt="Mundo Subaquático" />
+            <div class="overlay">
+              <h3>Reino Submarino</h3>
+              <p>Construção subaquática detalhada</p>
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img src="assets/img/astec.png  " alt="Replica Histórica" />
+            <div class="overlay">
+              <h3>Replica Histórica</h3>
+              <p>Monumentos famosos recriados em pixel art</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <form class="formulario-contato" onsubmit="enviarMensagem(event)">
+          <div class="input-grupo">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              placeholder="Digite seu nome completo"
+              required
+            />
+          </div>
+          <div class="input-grupo">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+          </div>
+          <div class="input-grupo">
+            <label for="mensagem">Sua Mensagem</label>
+            <textarea
+              id="mensagem"
+              placeholder="Digite sua mensagem aqui"
+              required
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="input-grupo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto">
+              <option value="">Selecione um assunto</option>
+              <option value="duvida">Dúvida sobre Terraria</option>
+              <option value="feedback">Feedback do Site</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+    <footer class="minecraft-footer">
+      <div class="footer-logo">
+        <img
+          src="assets/img/icon.png"
+          alt="Terraria Logo"
+          style="height: 40px; margin-right: 10px"
+        />
+        Terraria - Alessandro
+      </div>
+      <div class="footer-links">
+        <a href="#home"><i class="fas fa-home"></i> Início</a>
+        <a href="#sobre"><i class="fas fa-user"></i> Sobre</a>
+        <a href="#estrutura"><i class="fas fa-code"></i> Código</a>
+        <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/aless.mendes/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/AlessandroMendesS"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/alessandro-mendes-925621311/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
